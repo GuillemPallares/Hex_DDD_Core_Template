@@ -1,0 +1,75 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.30114.105
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Hex_DDD_Core_Template.Core", "Hex_DDD_Core_Template.Core", "{E924757A-39DC-42CF-A519-59F59D0A5970}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Hex_DDD_Core_Template.Core.Application", "Hex_DDD_Core_Template.Core\Hex_DDD_Core_Template.Core.Application\Hex_DDD_Core_Template.Core.Application.csproj", "{AD78E35A-C8FA-4DB7-811A-24B238C41B54}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Hex_DDD_Core_Template.Core.Infrastructure", "Hex_DDD_Core_Template.Core\Hex_DDD_Core_Template.Core.Infrastructure\Hex_DDD_Core_Template.Core.Infrastructure.csproj", "{11DBB1E1-8D81-4101-B869-1C200069C295}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Hex_DDD_Core_Template.Core.Domain", "Hex_DDD_Core_Template.Core\Hex_DDD_Core_Template.Core.Domain\Hex_DDD_Core_Template.Core.Domain.csproj", "{0424CCE8-0335-47C8-92B3-0F0421886525}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Hex_DDD_Core_Template.UI", "Hex_DDD_Core_Template.UI", "{D3409EAA-11D0-45FB-8876-8D9F8271AC01}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Hex_DDD_Core_Template.UI.Client", "Hex_DDD_Core_Template.UI\Hex_DDD_Core_Template.UI.Client\Hex_DDD_Core_Template.UI.Client.csproj", "{9A720325-2C61-4181-A3F1-C845F03C19B3}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Hex_DDD_Core_Template.UI.Components", "Hex_DDD_Core_Template.UI\Hex_DDD_Core_Template.UI.Components\Hex_DDD_Core_Template.UI.Components.csproj", "{1C5A773F-EDB3-4A34-A900-1C8C9991F987}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Hex_DDD_Core_Template.API", "Hex_DDD_Core_Template.API", "{72CB9361-051B-4F10-86B7-83074F8EB523}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Hex_DDD_Core_Template.API.WeatherForecast", "Hex_DDD_Core_Template.API\Hex_DDD_Core_Template.API.WeatherForecast\Hex_DDD_Core_Template.API.WeatherForecast.csproj", "{6727A47B-B990-4A32-BE3E-E7B4B98B435B}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Hex_DDD_Core_Template.Web", "Hex_DDD_Core_Template.Web", "{190186AC-7BEA-479F-AF0D-8C38FC2420FB}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Hex_DDD_Core_Template.Web.WeatherForecast", "Hex_DDD_Core_Template.Web\Hex_DDD_Core_Template.Web.WeatherForecast\Hex_DDD_Core_Template.Web.WeatherForecast.csproj", "{9ACD8B26-2D77-423B-8DCA-7BCE88A6BCDE}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{AD78E35A-C8FA-4DB7-811A-24B238C41B54}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{AD78E35A-C8FA-4DB7-811A-24B238C41B54}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{AD78E35A-C8FA-4DB7-811A-24B238C41B54}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{AD78E35A-C8FA-4DB7-811A-24B238C41B54}.Release|Any CPU.Build.0 = Release|Any CPU
+		{11DBB1E1-8D81-4101-B869-1C200069C295}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{11DBB1E1-8D81-4101-B869-1C200069C295}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{11DBB1E1-8D81-4101-B869-1C200069C295}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{11DBB1E1-8D81-4101-B869-1C200069C295}.Release|Any CPU.Build.0 = Release|Any CPU
+		{0424CCE8-0335-47C8-92B3-0F0421886525}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{0424CCE8-0335-47C8-92B3-0F0421886525}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{0424CCE8-0335-47C8-92B3-0F0421886525}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{0424CCE8-0335-47C8-92B3-0F0421886525}.Release|Any CPU.Build.0 = Release|Any CPU
+		{9A720325-2C61-4181-A3F1-C845F03C19B3}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{9A720325-2C61-4181-A3F1-C845F03C19B3}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{9A720325-2C61-4181-A3F1-C845F03C19B3}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{9A720325-2C61-4181-A3F1-C845F03C19B3}.Release|Any CPU.Build.0 = Release|Any CPU
+		{1C5A773F-EDB3-4A34-A900-1C8C9991F987}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{1C5A773F-EDB3-4A34-A900-1C8C9991F987}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{1C5A773F-EDB3-4A34-A900-1C8C9991F987}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{1C5A773F-EDB3-4A34-A900-1C8C9991F987}.Release|Any CPU.Build.0 = Release|Any CPU
+		{6727A47B-B990-4A32-BE3E-E7B4B98B435B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{6727A47B-B990-4A32-BE3E-E7B4B98B435B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{6727A47B-B990-4A32-BE3E-E7B4B98B435B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{6727A47B-B990-4A32-BE3E-E7B4B98B435B}.Release|Any CPU.Build.0 = Release|Any CPU
+		{9ACD8B26-2D77-423B-8DCA-7BCE88A6BCDE}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{9ACD8B26-2D77-423B-8DCA-7BCE88A6BCDE}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{9ACD8B26-2D77-423B-8DCA-7BCE88A6BCDE}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{9ACD8B26-2D77-423B-8DCA-7BCE88A6BCDE}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{AD78E35A-C8FA-4DB7-811A-24B238C41B54} = {E924757A-39DC-42CF-A519-59F59D0A5970}
+		{11DBB1E1-8D81-4101-B869-1C200069C295} = {E924757A-39DC-42CF-A519-59F59D0A5970}
+		{0424CCE8-0335-47C8-92B3-0F0421886525} = {E924757A-39DC-42CF-A519-59F59D0A5970}
+		{9A720325-2C61-4181-A3F1-C845F03C19B3} = {D3409EAA-11D0-45FB-8876-8D9F8271AC01}
+		{1C5A773F-EDB3-4A34-A900-1C8C9991F987} = {D3409EAA-11D0-45FB-8876-8D9F8271AC01}
+		{6727A47B-B990-4A32-BE3E-E7B4B98B435B} = {72CB9361-051B-4F10-86B7-83074F8EB523}
+		{9ACD8B26-2D77-423B-8DCA-7BCE88A6BCDE} = {190186AC-7BEA-479F-AF0D-8C38FC2420FB}
+	EndGlobalSection
+EndGlobal
