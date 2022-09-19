@@ -1,13 +1,12 @@
 using Hex_DDD_Core_Template.Core.Application.Responses;
-using Hex_DDD_Core_Template.Core.Application.Services;
-using Hex_DDD_Core_Template.Core.Infrastructure.Services;
-using Hex_DDD_Core_Template.Core.Application.Enpoints;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
 using NSwag;
 using Hex_DDD_Core_Template.Core.Domain.WeatherAggregate;
 using Hex_DDD_Core_Template.Core.Infrastructure.Repositories;
+using FastEndpoints;
+using FastEndpoints.Swagger;
 
 namespace Hex_DDD_Core_Template.Core.Application.Builders
 {
@@ -15,11 +14,16 @@ namespace Hex_DDD_Core_Template.Core.Application.Builders
     {
         public static IServiceCollection AddHex_DDD_Core_Template(this IServiceCollection services)
         {
-            services.AddTransient<IWeatherForecastService<WeatherForecastResponse>, WeatherForecastService>();
             services.AddTransient<IWeatherRepository, WeatherRepository>();
             services.AddAutoMapper(typeof(Hex_DDD_Core_TemplateBuilder));
             services.AddEndpointsApiExplorer();
-            services.AddSwaggerDocument();
+            services.AddSwaggerDoc(shortSchemaNames: true, settings: s =>
+            {
+                s.DocumentName = "Initial Release";
+                s.Title = "my api";
+                s.Version = "v1.0";
+            });
+            services.AddFastEndpoints();
 
             return services;
         }
@@ -28,16 +32,19 @@ namespace Hex_DDD_Core_Template.Core.Application.Builders
         {
             if (app.Environment.IsDevelopment())
             {
-                app.UseOpenApi(); // serve OpenAPI/Swagger documents
-                app.UseSwaggerUi3(); // serve Swagger UI
-                app.UseReDoc(); // serve ReDoc UI
+                app.UseOpenApi();
+                app.UseSwaggerUi3(s => s.ConfigureDefaults());
+                app.UseReDoc(s => s.Path = "/docs");
             }
 
 
             app.UseHttpsRedirection();
 
-            app.AddWeatherEndpoint();
-
+            app.UseFastEndpoints(c =>
+            {
+                c.Endpoints.RoutePrefix = "api";
+            });
+            
             return app;
         }
     }
