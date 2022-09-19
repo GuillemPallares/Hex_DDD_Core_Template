@@ -1,0 +1,14 @@
+<Project Sdk="Microsoft.NET.Sdk.Web">
+
+  <ItemGroup>
+    <ProjectReference Include="..\..\Hex_DDD_Core_Template.UI\Hex_DDD_Core_Template.UI.Client\Hex_DDD_Core_Template.UI.Client.csproj" />
+    <ProjectReference Include="..\..\Hex_DDD_Core_Template.UI\Hex_DDD_Core_Template.UI.Components\Hex_DDD_Core_Template.UI.Components.csproj" />
+  </ItemGroup>
+
+  <PropertyGroup>
+    <TargetFramework>net6.0</TargetFramework>
+    <Nullable>enable</Nullable>
+    <ImplicitUsings>enable</ImplicitUsings>
+  </PropertyGroup>
+
+</Project>
