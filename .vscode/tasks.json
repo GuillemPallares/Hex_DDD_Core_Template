@@ -1,0 +1,41 @@
+{
+    "version": "2.0.0",
+    "tasks": [
+        {
+            "label": "build",
+            "command": "dotnet",
+            "type": "process",
+            "args": [
+                "build",
+                "${workspaceFolder}/Hex_DDD_Core_Template.UI/Hex_DDD_Core_Template.UI.Client/Hex_DDD_Core_Template.UI.Client.csproj",
+                "/property:GenerateFullPaths=true",
+                "/consoleloggerparameters:NoSummary"
+            ],
+            "problemMatcher": "$msCompile"
+        },
+        {
+            "label": "publish",
+            "command": "dotnet",
+            "type": "process",
+            "args": [
+                "publish",
+                "${workspaceFolder}/Hex_DDD_Core_Template.UI/Hex_DDD_Core_Template.UI.Client/Hex_DDD_Core_Template.UI.Client.csproj",
+                "/property:GenerateFullPaths=true",
+                "/consoleloggerparameters:NoSummary"
+            ],
+            "problemMatcher": "$msCompile"
+        },
+        {
+            "label": "watch",
+            "command": "dotnet",
+            "type": "process",
+            "args": [
+                "watch",
+                "run",
+                "--project",
+                "${workspaceFolder}/Hex_DDD_Core_Template.UI/Hex_DDD_Core_Template.UI.Client/Hex_DDD_Core_Template.UI.Client.csproj"
+            ],
+            "problemMatcher": "$msCompile"
+        }
+    ]
+}
