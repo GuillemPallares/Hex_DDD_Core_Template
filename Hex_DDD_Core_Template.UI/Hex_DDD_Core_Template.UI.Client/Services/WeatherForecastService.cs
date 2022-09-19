@@ -16,7 +16,7 @@ namespace Hex_DDD_Core_Template.UI.Client.Services
 
         public async Task<WeatherForecastModel[]> GetForecasts()
         {
-            var httpResponseMessage = await _httpClient.GetAsync($"/GetForecasts");
+            var httpResponseMessage = await _httpClient.GetAsync($"api/Weather/GetForecasts");
 
             httpResponseMessage.EnsureSuccessStatusCode();
             return await httpResponseMessage.Content.ReadFromJsonAsync<WeatherForecastModel[]>(); ;

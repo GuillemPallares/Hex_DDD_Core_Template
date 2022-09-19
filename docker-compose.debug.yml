@@ -1,0 +1,30 @@
+# Please refer https://aka.ms/HTTPSinContainer on how to setup an https developer certificate for your ASP .NET Core service.
+
+version: '3.4'
+
+services:
+  hexdddcoretemplateapiweatherforecast:
+    image: hexdddcoretemplateapiweatherforecast
+    build:
+      context: .
+      dockerfile: Hex_DDD_Core_Template.API/Hex_DDD_Core_Template.API.WeatherForecast/Dockerfile
+    ports:
+      - 5279:5279
+      - 7112:7112
+    environment:
+      - ASPNETCORE_ENVIRONMENT=Development
+    volumes:
+      - ~/.vsdbg:/remote_debugger:rw
+
+  exdddcoretemplatewebweatherforecast:
+    image: hexdddcoretemplatewebweatherforecast
+    build:
+      context: .
+      dockerfile: Hex_DDD_Core_Template.Web/Hex_DDD_Core_Template.Web.WeatherForecast/Dockerfile
+    ports:
+      - 5259:5259
+      - 7109:7109
+    environment:
+      - ASPNETCORE_ENVIRONMENT=Development
+    volumes:
+      - ~/.vsdbg:/remote_debugger:rw

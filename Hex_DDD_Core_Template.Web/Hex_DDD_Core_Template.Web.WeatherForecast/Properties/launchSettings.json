@@ -10,7 +10,6 @@
   "profiles": {
     "Hex_DDD_Core_Template.Web.WeatherForecast": {
       "commandName": "Project",
-      "dotnetRunMessages": true,
       "launchBrowser": true,
       "applicationUrl": "https://localhost:7109;http://localhost:5259",
       "environmentVariables": {
