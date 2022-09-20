@@ -1,4 +1,4 @@
-namespace Hex_DDD_Core_Template.UI.Client.Models
+namespace Hex_DDD_Core_Template.UI.Models
 {
     public class WeatherForecastModel
     {
