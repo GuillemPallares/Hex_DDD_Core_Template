@@ -20,10 +20,10 @@ namespace Hex_DDD_Core_Template.Core.Domain.WeatherAggregate
             this.Summary = summary;
         }
 
-        public WeatherForecast(DateTime date, FarenheitTemperature temperatureF, string? summary = null)
+        public WeatherForecast(DateTime date, CelciusTemperature temperatureC, FarenheitTemperature temperatureF, string? summary = null)
         {
             this.Date = date;
-            this.TemperatureC = CelciusTemperature.FromFarenheitTemperature(temperatureF.Value);
+            this.TemperatureC = temperatureC;
             this.TemperatureF = temperatureF;
             this.Summary = summary;
         }

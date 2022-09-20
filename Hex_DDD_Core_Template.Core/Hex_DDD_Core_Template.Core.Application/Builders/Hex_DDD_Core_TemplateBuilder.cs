@@ -7,6 +7,7 @@ using Hex_DDD_Core_Template.Core.Domain.WeatherAggregate;
 using Hex_DDD_Core_Template.Core.Infrastructure.Repositories;
 using FastEndpoints;
 using FastEndpoints.Swagger;
+using Hex_DDD_Core_Template.Core.Infrastructure.Builders;
 
 namespace Hex_DDD_Core_Template.Core.Application.Builders
 {
@@ -14,7 +15,8 @@ namespace Hex_DDD_Core_Template.Core.Application.Builders
     {
         public static IServiceCollection AddHex_DDD_Core_Template(this IServiceCollection services)
         {
-            services.AddTransient<IWeatherRepository, WeatherRepository>();
+            services.AddHex_DDD_Core_TemplateContexts();
+            services.AddHex_DDD_Core_TemplateRepositories();
             services.AddAutoMapper(typeof(Hex_DDD_Core_TemplateBuilder));
             services.AddEndpointsApiExplorer();
             services.AddSwaggerDoc(shortSchemaNames: true, settings: s =>
@@ -37,6 +39,7 @@ namespace Hex_DDD_Core_Template.Core.Application.Builders
                 app.UseReDoc(s => s.Path = "/docs");
             }
 
+            app.UseHex_DDD_Core_TemplateContexts();
 
             app.UseHttpsRedirection();
 

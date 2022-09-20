@@ -24,7 +24,7 @@ namespace Hex_DDD_Core_Template.Core.Application.Handlers
             _mapper = mapper;
         }
 
-        public override async Task HandleAsync(CancellationToken c)
-            => await SendAsync( _mapper.Map<IEnumerable<WeatherForecastResponse>>(await _weatherRepository.GetForecastsAsync()));
+        public override async Task HandleAsync(CancellationToken cancellationToken = default(CancellationToken))
+            => await SendAsync( _mapper.Map<IEnumerable<WeatherForecastResponse>>(await _weatherRepository.GetForecastsAsync(cancellationToken)));
     }
 }

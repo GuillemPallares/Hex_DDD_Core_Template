@@ -1,0 +1,1 @@
+dotnet ef migrations add IntitalMigration --startup-project ./Hex_DDD_Core_Template.API/Hex_DDD_Core_Template.API.WeatherForecast/Hex_DDD_Core_Template.API.WeatherForecast.csproj --project ./Hex_DDD_Core_Template.Core/Hex_DDD_Core_Template.Core.Infrastructure/Hex_DDD_Core_Template.Core.Infrastructure.csproj --output-dir ./Migrations
