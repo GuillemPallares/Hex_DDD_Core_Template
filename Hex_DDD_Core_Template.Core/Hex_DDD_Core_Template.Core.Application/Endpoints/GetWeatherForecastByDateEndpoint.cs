@@ -26,6 +26,6 @@ namespace Hex_DDD_Core_Template.Core.Application.Handlers
         }
 
         public override async Task HandleAsync(GetForecastByDate request, CancellationToken cancellationToken = default(CancellationToken))
-            => await SendAsync( _mapper.Map<WeatherForecastResponse>(await _weatherRepository.GetForecastByDateAsync(request.Date, cancellationToken)));
+            => await SendAsync( _mapper.Map<WeatherForecastResponse>(await _weatherRepository.GetForecastByDateAsync(new DateTime(request.Date), cancellationToken)));
     }
 }
