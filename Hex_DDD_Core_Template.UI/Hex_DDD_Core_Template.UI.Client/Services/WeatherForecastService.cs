@@ -1,4 +1,4 @@
-using Hex_DDD_Core_Template.UI.Client.Models;
+using Hex_DDD_Core_Template.UI.Models;
 
 namespace Hex_DDD_Core_Template.UI.Client.Services
 {
@@ -19,12 +19,15 @@ namespace Hex_DDD_Core_Template.UI.Client.Services
             var httpResponseMessage = await _httpClient.GetAsync($"api/Weather/GetForecasts");
 
             httpResponseMessage.EnsureSuccessStatusCode();
-            return await httpResponseMessage.Content.ReadFromJsonAsync<WeatherForecastModel[]>(); ;
+            return await httpResponseMessage.Content.ReadFromJsonAsync<WeatherForecastModel[]>();
         }
 
-        public Task<WeatherForecastModel> GetForecastByDate(DateTime startDate)
+        public async Task<WeatherForecastModel> GetForecastByDate(DateTime startDate)
         {
-            throw new NotImplementedException();
+            var httpResponseMessage = await _httpClient.GetAsync($"api/Weather/GetForecastByDate?Date={startDate.Ticks}");
+
+            httpResponseMessage.EnsureSuccessStatusCode();
+            return await httpResponseMessage.Content.ReadFromJsonAsync<WeatherForecastModel>();
         }
     }
 }

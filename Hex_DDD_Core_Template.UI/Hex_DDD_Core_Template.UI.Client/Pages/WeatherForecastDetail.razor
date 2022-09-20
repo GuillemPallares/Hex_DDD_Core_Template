@@ -1,0 +1,33 @@
+﻿@page "/fetchdata/{Date:long}"
+@using Models
+@using Hex_DDD_Core_Template.UI.Components
+
+<PageTitle>Weather forecast</PageTitle>
+
+@inject WeatherForecastService ForecastService
+
+@if (forecast == null)
+{
+    <p><em>Loading forecast...</em></p>
+}
+else
+{
+    <h1>Weather forecast for @forecast.Date</h1>
+
+    <p>This component demonstrates fetching data from a service by a date</p>
+    
+    <WeatherForecastComponent WeatherForecast="forecast"></WeatherForecastComponent>
+}
+
+@code {
+    
+    [Parameter]
+    public long Date { get; set; }
+
+    private WeatherForecastModel? forecast;
+
+    protected override async Task OnInitializedAsync()
+    {
+        forecast = await ForecastService.GetForecastByDate(new DateTime(Date));
+    }
+}

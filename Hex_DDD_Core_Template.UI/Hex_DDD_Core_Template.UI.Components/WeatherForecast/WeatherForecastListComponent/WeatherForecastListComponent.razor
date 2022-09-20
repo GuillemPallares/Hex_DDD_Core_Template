@@ -1,0 +1,27 @@
+﻿@namespace Hex_DDD_Core_Template.UI.Components
+
+@inject NavigationManager _nav
+
+<div class="component">
+    <table class="table">
+            <thead>
+                <tr>
+                    <th>Date</th>
+                    <th>Temp. (C)</th>
+                    <th>Temp. (F)</th>
+                    <th>Summary</th>
+                </tr>
+            </thead>
+            <tbody>
+                @foreach (var forecast in WeatherForecasts)
+                {
+                    <tr @onclick=@(() => _nav.NavigateTo($"/fetchdata/{forecast.Date.Ticks}"))>
+                        <td>@forecast.Date.ToShortDateString()</td>
+                        <td>@forecast.TemperatureC</td>
+                        <td>@forecast.TemperatureF</td>
+                        <td>@forecast.Summary</td>
+                    </tr>
+                }
+            </tbody>
+        </table>
+</div>

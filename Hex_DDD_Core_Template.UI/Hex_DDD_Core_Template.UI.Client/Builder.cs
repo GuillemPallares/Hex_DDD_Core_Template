@@ -54,7 +54,7 @@ public static class HttpClientBuilder
     {
         services.AddHttpClient("WeatherForecast", httpClient =>
         {
-            httpClient.BaseAddress = new Uri("http://host.docker.internal:5279/");
+            httpClient.BaseAddress = new Uri("http://Hex_DDD_Core_Template.API:5279/");
 
             // using Microsoft.Net.Http.Headers;
             // The GitHub API requires two headers.

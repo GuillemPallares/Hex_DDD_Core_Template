@@ -1,0 +1,29 @@
+﻿@page "/fetchdata"
+@using Models
+@using Hex_DDD_Core_Template.UI.Components
+
+<PageTitle>Weather forecast</PageTitle>
+
+@inject WeatherForecastService ForecastService
+
+<h1>Weather forecast</h1>
+
+<p>This component demonstrates fetching data from a service.</p>
+
+@if (forecasts == null)
+{
+    <p><em>Loading...</em></p>
+}
+else
+{
+    <WeatherForecastListComponent WeatherForecasts="forecasts"></WeatherForecastListComponent>
+}
+
+@code {
+    private WeatherForecastModel[]? forecasts;
+
+    protected override async Task OnInitializedAsync()
+    {
+        forecasts = await ForecastService.GetForecasts();
+    }
+}
