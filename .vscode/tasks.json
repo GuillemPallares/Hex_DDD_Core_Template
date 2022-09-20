@@ -36,6 +36,62 @@
                 "${workspaceFolder}/Hex_DDD_Core_Template.UI/Hex_DDD_Core_Template.UI.Client/Hex_DDD_Core_Template.UI.Client.csproj"
             ],
             "problemMatcher": "$msCompile"
+        },
+        {
+            "type": "docker-build",
+            "label": "docker-build: debug",
+            "dependsOn": [
+                "build"
+            ],
+            "dockerBuild": {
+                "tag": "hexdddcoretemplate:dev",
+                "target": "base",
+                "dockerfile": "${workspaceFolder}/Hex_DDD_Core_Template.API/Hex_DDD_Core_Template.API.WeatherForecast/Dockerfile",
+                "context": "${workspaceFolder}",
+                "pull": true
+            },
+            "netCore": {
+                "appProject": "${workspaceFolder}/Hex_DDD_Core_Template.API/Hex_DDD_Core_Template.API.WeatherForecast/Hex_DDD_Core_Template.API.WeatherForecast.csproj"
+            }
+        },
+        {
+            "type": "docker-build",
+            "label": "docker-build: release",
+            "dependsOn": [
+                "build"
+            ],
+            "dockerBuild": {
+                "tag": "hexdddcoretemplate:latest",
+                "dockerfile": "${workspaceFolder}/Hex_DDD_Core_Template.API/Hex_DDD_Core_Template.API.WeatherForecast/Dockerfile",
+                "context": "${workspaceFolder}",
+                "pull": true
+            },
+            "netCore": {
+                "appProject": "${workspaceFolder}/Hex_DDD_Core_Template.API/Hex_DDD_Core_Template.API.WeatherForecast/Hex_DDD_Core_Template.API.WeatherForecast.csproj"
+            }
+        },
+        {
+            "type": "docker-run",
+            "label": "docker-run: debug",
+            "dependsOn": [
+                "docker-build: debug"
+            ],
+            "dockerRun": {},
+            "netCore": {
+                "appProject": "${workspaceFolder}/Hex_DDD_Core_Template.API/Hex_DDD_Core_Template.API.WeatherForecast/Hex_DDD_Core_Template.API.WeatherForecast.csproj",
+                "enableDebugging": true
+            }
+        },
+        {
+            "type": "docker-run",
+            "label": "docker-run: release",
+            "dependsOn": [
+                "docker-build: release"
+            ],
+            "dockerRun": {},
+            "netCore": {
+                "appProject": "${workspaceFolder}/Hex_DDD_Core_Template.API/Hex_DDD_Core_Template.API.WeatherForecast/Hex_DDD_Core_Template.API.WeatherForecast.csproj"
+            }
         }
     ]
 }
