@@ -25,6 +25,8 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Hex_DDD_Core_Template.Web",
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Hex_DDD_Core_Template.Web.WeatherForecast", "Hex_DDD_Core_Template.Web\Hex_DDD_Core_Template.Web.WeatherForecast\Hex_DDD_Core_Template.Web.WeatherForecast.csproj", "{9ACD8B26-2D77-423B-8DCA-7BCE88A6BCDE}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Hex_DDD_Core_Template.UI.Models", "Hex_DDD_Core_Template.UI\Hex_DDD_Core_Template.UI.Models\Hex_DDD_Core_Template.UI.Models.csproj", "{A8DE5CC7-BC73-41DF-8A57-0350717D272F}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -62,6 +64,10 @@ Global
 		{9ACD8B26-2D77-423B-8DCA-7BCE88A6BCDE}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{9ACD8B26-2D77-423B-8DCA-7BCE88A6BCDE}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{9ACD8B26-2D77-423B-8DCA-7BCE88A6BCDE}.Release|Any CPU.Build.0 = Release|Any CPU
+		{A8DE5CC7-BC73-41DF-8A57-0350717D272F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A8DE5CC7-BC73-41DF-8A57-0350717D272F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A8DE5CC7-BC73-41DF-8A57-0350717D272F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A8DE5CC7-BC73-41DF-8A57-0350717D272F}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(NestedProjects) = preSolution
 		{AD78E35A-C8FA-4DB7-811A-24B238C41B54} = {E924757A-39DC-42CF-A519-59F59D0A5970}
@@ -71,5 +77,6 @@ Global
 		{1C5A773F-EDB3-4A34-A900-1C8C9991F987} = {D3409EAA-11D0-45FB-8876-8D9F8271AC01}
 		{6727A47B-B990-4A32-BE3E-E7B4B98B435B} = {72CB9361-051B-4F10-86B7-83074F8EB523}
 		{9ACD8B26-2D77-423B-8DCA-7BCE88A6BCDE} = {190186AC-7BEA-479F-AF0D-8C38FC2420FB}
+		{A8DE5CC7-BC73-41DF-8A57-0350717D272F} = {D3409EAA-11D0-45FB-8876-8D9F8271AC01}
 	EndGlobalSection
 EndGlobal
