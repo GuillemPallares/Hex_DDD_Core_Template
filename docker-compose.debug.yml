@@ -3,7 +3,7 @@
 version: '3.4'
 
 services:
-  hexdddcoretemplateapiweatherforecast:
+  Hex_DDD_Core_Template.API:
     image: hexdddcoretemplateapiweatherforecast
     build:
       context: .
@@ -16,7 +16,7 @@ services:
     volumes:
       - ~/.vsdbg:/remote_debugger:rw
 
-  exdddcoretemplatewebweatherforecast:
+  Hex_DDD_Core_Template.Web:
     image: hexdddcoretemplatewebweatherforecast
     build:
       context: .
@@ -28,3 +28,8 @@ services:
       - ASPNETCORE_ENVIRONMENT=Development
     volumes:
       - ~/.vsdbg:/remote_debugger:rw
+    depends_on:
+      - Hex_DDD_Core_Template.API
+networks:
+  Hex_DDD_Core_Templatenet:
+    driver: bridge

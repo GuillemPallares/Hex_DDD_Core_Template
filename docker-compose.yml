@@ -3,7 +3,7 @@
 version: '3.4'
 
 services:
-  hexdddcoretemplateapiweatherforecast:
+  Hex_DDD_Core_Template.API:
     image: hexdddcoretemplateapiweatherforecast
     build:
       context: .
@@ -12,7 +12,7 @@ services:
       - 5279:5279
       - 7112:7112
 
-  hexdddcoretemplatewebweatherforecast:
+  Hex_DDD_Core_Template.Web:
     image: hexdddcoretemplatewebweatherforecast
     build:
       context: .
@@ -20,3 +20,5 @@ services:
     ports:
       - 5259:5259
       - 7109:7109
+    depends_on:
+      - Hex_DDD_Core_Template.API
