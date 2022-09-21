@@ -2,19 +2,14 @@
     "version": "0.2.0",
     "configurations": [
         {
-            // Use IntelliSense to find out which attributes exist for C# debugging
-            // Use hover for the description of the existing attributes
-            // For further information visit https://github.com/OmniSharp/omnisharp-vscode/blob/master/debugger-launchjson.md
             "name": ".NET Core Launch (web)",
             "type": "coreclr",
             "request": "launch",
             "preLaunchTask": "build",
-            // If you have changed target frameworks, make sure to update the program path.
-            "program": "${workspaceFolder}/Hex_DDD_Core_Template.UI/Hex_DDD_Core_Template.UI.Client/bin/Debug/net6.0/Hex_DDD_Core_Template.UI.Client.dll",
+            "program": "${workspaceFolder}/Hex_DDD_Core_Template.Web/Hex_DDD_Core_Template.Web.WeatherForecast/bin/Debug/net6.0/Hex_DDD_Core_Template.Web.WeatherForecast.dll",
             "args": [],
-            "cwd": "${workspaceFolder}/Hex_DDD_Core_Template.UI/Hex_DDD_Core_Template.UI.Client",
+            "cwd": "${workspaceFolder}/Hex_DDD_Core_Template.Web/Hex_DDD_Core_Template.Web.WeatherForecast",
             "stopAtEntry": false,
-            // Enable launching a web browser when ASP.NET Core starts. For more information: https://aka.ms/VSCode-CS-LaunchJson-WebBrowser
             "serverReadyAction": {
                 "action": "openExternally",
                 "pattern": "\\bNow listening on:\\s+(https?://\\S+)"
@@ -27,9 +22,53 @@
             }
         },
         {
+            "name": ".NET Core Launch (API)",
+            "type": "coreclr",
+            "request": "launch",
+            "preLaunchTask": "build",
+            "program": "${workspaceFolder}/Hex_DDD_Core_Template.API/Hex_DDD_Core_Template.API.WeatherForecast/bin/Debug/net6.0/Hex_DDD_Core_Template.API.WeatherForecast.dll",
+            "args": [],
+            "cwd": "${workspaceFolder}/Hex_DDD_Core_Template.API/Hex_DDD_Core_Template.API.WeatherForecast",
+            "stopAtEntry": false,
+            "serverReadyAction": {
+                "action": "openExternally",
+                "pattern": "\\bNow listening on:\\s+(https?://\\S+)",
+            },
+            "env": {
+                "ASPNETCORE_ENVIRONMENT": "Development"
+            }
+        },
+        {
+            "name": "Docker .NET Core Launch (API)",
+            "type": "docker",
+            "request": "launch",
+            "preLaunchTask": "docker-run: debug",
+            "netCore": {
+                "appProject": "${workspaceFolder}/Hex_DDD_Core_Template.API/Hex_DDD_Core_Template.API.WeatherForecast/Hex_DDD_Core_Template.API.WeatherForecast.csproj"
+            }
+        },
+        {
+            "name": "Docker .NET Core Launch (Web)",
+            "type": "docker",
+            "request": "launch",
+            "preLaunchTask": "docker-run: debug",
+            "netCore": {
+                "appProject": "${workspaceFolder}/Hex_DDD_Core_Template.Web/Hex_DDD_Core_Template.Web.WeatherForecast/Hex_DDD_Core_Template.Web.WeatherForecast.csproj"
+            }
+        },
+        {
             "name": ".NET Core Attach",
             "type": "coreclr",
             "request": "attach"
-        }
+        },
+        {
+            "name": "Docker .NET Core Attach (Preview)",
+            "type": "docker",
+            "request": "attach",
+            "platform": "netCore",
+            "sourceFileMap": {
+                "/src": "${workspaceFolder}"
+            }
+        },
     ]
 }
